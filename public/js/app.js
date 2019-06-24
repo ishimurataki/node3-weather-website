@@ -19,7 +19,9 @@ weatherForm.addEventListener('submit', (e) => {
             }
             const message = data.forecast.summary + " It is currently " + 
                 data.forecast.temperature + " degrees out. " +
-                "There is a " + data.forecast.precipProbability + "% chance of rain.";
+                "There is a " + data.forecast.precipProbability*100 + "% chance of rain. " + 
+                "The high today is " + data.forecast.temperatureHigh + " degrees with a low of " + 
+                data.forecast.temperatureLow + " degrees.";
                 
             messageOne.textContent = data.location;
             messageTwo.textContent = message;
